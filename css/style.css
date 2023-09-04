@@ -211,3 +211,42 @@ hr{
   background: white;
   color: var(--dark);
 }
+/* content */
+.content{
+  display: flex;
+  margin: 3rem 0;
+}
+.articles{
+  flex: auto;
+}
+.popular{
+  flex: 350px;
+}
+.underline{
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 2rem;
+}
+.articles article{
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  grid-auto-rows: auto;
+  grid-template-areas: 
+  "title img"
+  "content img"
+  "author img"
+  "details img";
+}
+.articles article img{
+  grid-area: img;
+}.articles article title{
+  grid-area: title;
+}.articles article p:first-child{
+  grid-area: content;
+}
+.articles article .article-author{
+  grid-area: author;
+}
+.articles article .text-hint{
+  grid-area: details;
+}
