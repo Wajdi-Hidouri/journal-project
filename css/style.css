@@ -18,7 +18,7 @@
   font-size: 62.5%;
 }
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.6rem;
   line-height: 2rem;
 }
@@ -36,12 +36,10 @@ h3,
 h4,
 h5,
 h6{
-  font-family: 'Staatliches', cursive;
   margin: 1rem 0;
 }
 h3{
   font-size: 1.8rem;
-  font-weight: 400;
 }
 img{
   max-width: 100%;
@@ -50,11 +48,16 @@ p{
   margin: 1rem 0;
 }
 /* utility */
+.mx-1{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .container{
   display: block;
   margin: auto;
   max-width: 1100px;
   height: 1500px;
+  padding: 0 1rem;
 }
 header{
   display: grid;
@@ -153,4 +156,58 @@ nav{
 }
 .article-small .article-author, .article-small .text-hint{
   grid-column: span 2;
+}
+/* ads */
+.ads{
+  background: var(--gray-light);
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 200px 1fr auto 1fr ;
+  grid-template-rows: 1fr auto auto auto 1fr;
+  grid-template-areas:
+  "img . . ."
+  "img . h1 ."
+  "img . p ."
+  "img . form ."
+  "img . . .";
+}
+.ads h1{
+  grid-area: h1;
+  font-size: 4rem;
+}
+.ads p{
+  grid-area: p;
+}
+.ads form{
+  grid-area: form;
+}
+.ads img{
+  grid-area: img;
+}
+hr{
+  border: 0;
+  border-bottom: 1px solid var(--gray);
+}
+.ads form input{
+  background: var(--gray-light);
+  border: 0;
+  border-bottom: 1px solid var(--dark);
+  padding: 1rem 0;
+  margin: 1rem;
+  padding: 1rem 0;
+  outline: 0;
+}
+::selection{
+  background: var(--primary);
+}
+::placeholder{
+  color: var(--dark);
+}
+.btn-dark{
+  background: var(--dark);
+  color: white;
+}
+.btn-dark:hover{
+  background: white;
+  color: var(--dark);
 }
