@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 /* varaible */
 :root{
@@ -174,6 +175,7 @@ nav{
 .ads h1{
   grid-area: h1;
   font-size: 4rem;
+  line-height: 1;
 }
 .ads p{
   grid-area: p;
